@@ -13,3 +13,7 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+
+require('./components/Layouts/Header');
+require('./components/Layouts/Footer');
+require('./components/Home/Home');
