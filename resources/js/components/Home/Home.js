@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import PrincipalFrame from "./Section/PrincipalFrame";
 import SecondFrame from "./Section/SecondFrame";
 import ThirdFrame from "./Section/ThirdFrame";
+import FourthFrame from "./Section/FourthFrame";
 const Home = ({}) =>{
 
     let url = window.location;
@@ -12,6 +13,7 @@ const Home = ({}) =>{
             <PrincipalFrame />
             <SecondFrame />
             <ThirdFrame />
+            <FourthFrame/>
         </>
     )
 };

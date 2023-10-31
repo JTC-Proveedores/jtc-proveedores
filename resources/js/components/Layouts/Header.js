@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactDOM from "react-dom";
-
 import {BrowserRouter,Routes,Route, NavLink} from "react-router-dom";
-import {useMediaQuery} from 'react-responsive';
-import Home from "../Home/Home";
+import Logo from '../../../../public/img/Logo-alternative.png';
 
 //Pages
 const Inicio = () => {
@@ -47,13 +45,29 @@ function NavBar() {
         window.location.href = link;
     }
 
+    // Sticky Menu Area
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+    });
+
+
+    /* Method that will fix header after a specific scrollable */
+    const isSticky = (e) => {
+        const header = document.querySelector('.navbar');
+        const scrollTop = window.scrollY;
+        scrollTop >= 80 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+    };
+
     return (
         <div>
             <div className={click ? "main-container" : ""}  onClick={()=>Close()} />
             <nav className="navbar" onClick={e => e.stopPropagation()}>
                 <div className="nav-container">
                     <NavLink exact className="nav-logo">
-                        JTC Proveedores
+                        <img src={Logo} className={'custom-logo'}/>
                     </NavLink>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">

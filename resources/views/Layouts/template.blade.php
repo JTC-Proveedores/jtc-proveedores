@@ -6,6 +6,9 @@
 
     <title>JTC Proveedores</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
@@ -20,9 +23,11 @@
 
 @include('Layouts.header')
 
-    <section class="wrap user-panel-bg">
+    <section>
         @yield('content')
     </section>
+
+@include('Plugins.WhatsApp-Plugin')
 
 @include('Layouts.footer')
 
