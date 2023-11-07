@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>JTC Proveedores</title>
+    @yield('seo')
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
