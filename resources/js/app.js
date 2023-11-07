@@ -17,3 +17,6 @@ require('./components/Example');
 require('./components/Layouts/Header');
 require('./components/Layouts/Footer');
 require('./components/Home/Home');
+require('./components/Nosotros/Nosotros');
+require('./components/Categorias/Categorias');
+require('./components/Contacto/Contacto');

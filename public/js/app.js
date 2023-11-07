@@ -9268,6 +9268,9 @@ __webpack_require__(/*! ./components/Example */ "./resources/js/components/Examp
 __webpack_require__(/*! ./components/Layouts/Header */ "./resources/js/components/Layouts/Header.js");
 __webpack_require__(/*! ./components/Layouts/Footer */ "./resources/js/components/Layouts/Footer.js");
 __webpack_require__(/*! ./components/Home/Home */ "./resources/js/components/Home/Home.js");
+__webpack_require__(/*! ./components/Nosotros/Nosotros */ "./resources/js/components/Nosotros/Nosotros.js");
+__webpack_require__(/*! ./components/Categorias/Categorias */ "./resources/js/components/Categorias/Categorias.js");
+__webpack_require__(/*! ./components/Contacto/Contacto */ "./resources/js/components/Contacto/Contacto.js");
 
 /***/ }),
 
@@ -9307,6 +9310,258 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/Categorias/Categorias.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/Categorias/Categorias.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure " + obj); }
+
+
+
+
+var Categorias = function Categorias(_ref) {
+  _objectDestructuringEmpty(_ref);
+  var url = window.location;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: "Hola"
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Categorias);
+if (document.getElementById('categorias')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Categorias, {}), document.getElementById('categorias'));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/Contacto/Contacto.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Contacto/Contacto.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _Functions_General__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Functions/General */ "./resources/js/components/Functions/General.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure " + obj); }
+
+
+
+
+
+var Contacto = function Contacto(_ref) {
+  _objectDestructuringEmpty(_ref);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_Functions_General__WEBPACK_IMPORTED_MODULE_2__.getWindowSize)()),
+    _useState2 = _slicedToArray(_useState, 2),
+    windowSize = _useState2[0],
+    setWindowSize = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    loading = _useState4[0],
+    setLoading = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+    _useState6 = _slicedToArray(_useState5, 2),
+    view = _useState6[0],
+    setView = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState8 = _slicedToArray(_useState7, 2),
+    names = _useState8[0],
+    setNames = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState10 = _slicedToArray(_useState9, 2),
+    email = _useState10[0],
+    setEmail = _useState10[1];
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState12 = _slicedToArray(_useState11, 2),
+    message = _useState12[0],
+    setMessage = _useState12[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    function handleWindowResize() {
+      setWindowSize((0,_Functions_General__WEBPACK_IMPORTED_MODULE_2__.getWindowSize)());
+    }
+    window.addEventListener('resize', handleWindowResize);
+    return function () {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+  var height = windowSize.innerHeight - 80;
+  var url = window.location;
+  function save(e) {
+    console.log('Bang my head against the wall');
+  }
+  var content = [{
+    icon: 'fas fa-map-marker-alt',
+    title: 'Ubicación',
+    list: ['Avenida prolongación Javier Prado este 8117 - Ate']
+  }, {
+    icon: 'fas fa-mobile-alt',
+    title: 'Call center',
+    list: ['+51 900 169 121']
+  }, {
+    icon: 'fas fa-envelope-open-text',
+    title: 'E-mail',
+    list: ['cotizaciones@jtcproveedores.com']
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
+    className: 'contact-sect',
+    style: {
+      minHeight: height + 'px'
+    },
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: 'container py-4',
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: 'contact-map',
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("iframe", {
+          src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.982877344494!2d-76.93691932586385!3d-12.044698941860409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7bb00d4553f%3A0x813f335715c37413!2sJTC%20Proveedores!5e0!3m2!1ses-419!2spe!4v1699336725788!5m2!1ses-419!2spe",
+          width: "100%",
+          height: "250",
+          style: {
+            border: "0"
+          },
+          allowFullScreen: "",
+          loading: "lazy",
+          referrerPolicy: "no-referrer-when-downgrade"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: 'pt-4',
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: 'row justify-content-center contact-area',
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: 'col-12 col-md-5',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              className: 'p-2 contactMedia',
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: 't1',
+                children: "CONTACTANOS"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: 'pt-2 t2',
+                children: "Tenemos enfoque en el servicio al cliente. Contamos con almacenes que garantizan entregas puntuales y un s\xF3lido soporte postventa a trav\xE9s de nuestros asesores comerciales altamente capacitados"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: '',
+                children: content.map(function (c, key) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                    className: 'contentDiv',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                      className: 'row mx-0',
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                        className: 'col-2 text-center my-auto',
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+                          className: 'icon ' + c.icon
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                        className: 'col-10',
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                          className: 'tcd1',
+                          children: c.title
+                        }), c.list.map(function (l, key) {
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                            className: 'tcd2',
+                            children: l
+                          });
+                        })]
+                      })]
+                    })
+                  });
+                })
+              })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: 'col-12 col-md-7',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+              className: 'formContact',
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                className: "form-group py-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+                  className: 'formLabel',
+                  children: "Nombre(s) y Apellido(s)"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+                  type: "text",
+                  className: "form-control",
+                  placeholder: "Ingresar nombre(s) y apellido(s)",
+                  name: "names",
+                  value: names,
+                  onChange: function onChange(e) {
+                    return setNames(e.target.value);
+                  }
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                className: "form-group py-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+                  className: 'formLabel',
+                  children: "Correo de contacto"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+                  type: "email",
+                  className: "form-control",
+                  placeholder: "Ingresar correo electr\xF3nico",
+                  name: 'email',
+                  value: email,
+                  onChange: function onChange(e) {
+                    return setEmail(e.target.value);
+                  }
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                className: "form-group py-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+                  className: 'formLabel',
+                  children: "Mensaje"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("textarea", {
+                  className: "form-control",
+                  rows: "3",
+                  name: 'message',
+                  value: message,
+                  onChange: function onChange(e) {
+                    return setMessage(e.target.value);
+                  }
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: 'form-group py-2',
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+                  type: "button",
+                  className: "btn btn-contact btn-lg btn-block",
+                  disabled: names && email && message ? false : false,
+                  onClick: function onClick(e) {
+                    return save(e);
+                  },
+                  children: "Enviar"
+                })
+              })]
+            })
+          })]
+        })
+      })]
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contacto);
+if (document.getElementById('contacto')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Contacto, {}), document.getElementById('contacto'));
+}
 
 /***/ }),
 
@@ -9532,9 +9787,14 @@ var FourthFrame = function FourthFrame(_ref) {
                     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                       children: des
                     });
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
-                    className: "flip-card-button",
-                    children: "Learn More"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: 'pt-4',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                      role: 'buttton',
+                      className: "flip-card-button",
+                      href: 'https://api.whatsapp.com/send?phone=51900169121',
+                      children: "Contactar"
+                    })
                   })]
                 })
               })]
@@ -9607,8 +9867,9 @@ var PrincipalFrame = function PrincipalFrame(_ref) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
             className: "btn btn-lg btn-jtc",
-            href: "#",
+            href: "https://api.whatsapp.com/send?phone=51900169121",
             role: "button",
+            target: '_blank',
             children: "Cont\xE1ctanos"
           })
         })]
@@ -9820,9 +10081,9 @@ var Footer = function Footer(_ref) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: 'container',
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: 'row mx-0',
+            className: 'row mx-0 justify-content-center',
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-              className: 'col-12 col-md-3',
+              className: 'col-8 col-md-3 pt-2 pb-4 py-md-0',
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: 'se-bg',
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
@@ -9831,12 +10092,12 @@ var Footer = function Footer(_ref) {
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: 'col-12 col-md-5',
+              className: 'col-12 col-md-5 py-2 py-md-0',
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: 'footer-title',
                 children: "Contacto"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("ul", {
-                className: 'list-unstyled footer-list my-3',
+                className: 'list-unstyled footer-list my-2',
                 children: contactLinks.map(function (cL, key) {
                   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
                     className: "pt-2",
@@ -9852,15 +10113,15 @@ var Footer = function Footer(_ref) {
                 })
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: 'col-12 col-md-4',
+              className: 'col-12 col-md-4 py-2 py-md-0',
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: 'footer-title',
                 children: "Buscanos en"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                className: 'my-3 row',
+                className: 'my-2 row',
                 children: socialMediaLinks.map(function (sml, key) {
                   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    className: 'col-12 col-md-auto',
+                    className: 'col-2 col-md-auto',
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
                       className: "footer-link-icon",
                       href: sml.link,
@@ -10115,6 +10376,45 @@ var element = document.getElementById('header');
 if (element) {
   var props = Object.assign({}, element.dataset);
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Header, _objectSpread({}, props)), element);
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/Nosotros/Nosotros.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Nosotros/Nosotros.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure " + obj); }
+
+
+
+
+var Nosotros = function Nosotros(_ref) {
+  _objectDestructuringEmpty(_ref);
+  var url = window.location;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: 'nosotros-sect',
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: 'sub-image',
+      children: "Nosotros"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: "Hola"
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nosotros);
+if (document.getElementById('nosotros')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Nosotros, {}), document.getElementById('nosotros'));
 }
 
 /***/ }),

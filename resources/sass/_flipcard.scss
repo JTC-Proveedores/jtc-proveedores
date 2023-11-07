@@ -38,7 +38,7 @@
     background-size: cover;
     background-position: center;
     border-radius: 8px;
-    min-height: 475px;
+    min-height: 525px;
     -ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
     transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
     -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
@@ -98,7 +98,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    padding: 60px 30px;
+    padding: 50px 25px;
     outline: 1px solid transparent;
     -webkit-perspective: inherit;
     perspective: inherit;
@@ -128,7 +128,7 @@
 .flip-card-button {
     background-color: transparent;
     border: 2px solid #fff;
-    border-radius: 2px;
+    border-radius: 0.5rem;
     color: #fff;
     cursor: pointer;
     font-size: 20px;
@@ -136,4 +136,12 @@
     margin-top: 25px;
     padding: 15px 20px;
     text-transform: uppercase;
+    text-decoration: unset !important;
+
+    &:hover, &:focus, &:active{
+        background-color: white;
+        color: $custom_blue;
+        font-weight: bold;
+        text-decoration: unset !important;
+    }
 }

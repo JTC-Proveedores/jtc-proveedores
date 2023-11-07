@@ -1,9 +1,5 @@
 @extends('Layouts.template')
 
 @section('content')
-
-    <div>
-        <p>Contacto</p>
-    </div>
-
+    <div id="contacto"></div>
 @endsection

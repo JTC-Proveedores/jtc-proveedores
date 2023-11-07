@@ -23,7 +23,7 @@ const PrincipalFrame = ({}) => {
                 <div className={'title-bg'}>
                     <h1>Más que un proveedor, tu aliado estratégico</h1>
                     <div>
-                        <a className="btn btn-lg btn-jtc" href="#" role="button">
+                        <a className="btn btn-lg btn-jtc" href="https://api.whatsapp.com/send?phone=51900169121" role="button" target={'_blank'}>
                             Contáctanos
                         </a>
                     </div>

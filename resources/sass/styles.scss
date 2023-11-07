@@ -209,6 +209,77 @@ $img_height: 900px;
     $img_height: 700px;
 }
 
+.contact-sect{
+    .btn-contact{
+        background-color: $custom_blue;
+        color: white;
+        font-weight: bold;
+        width: 100%;
+
+        &:hover{
+            background-color: $custom_blue;
+            color: white;
+            text-decoration: unset;
+        }
+    }
+
+    .contact-area{
+        border: $custom_blue 4.5px solid;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    .formContact{
+        .formLabel{
+            font-weight: bold;
+            font-size: 17.5px;
+        }
+    }
+
+    .contactMedia{
+
+        .t1{
+            color: black;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .t2{
+            color: $custom_gray;
+            font-size: 17.5px;
+        }
+    }
+
+    .contentDiv{
+        background-color: $custom_light_blue;
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        margin: 1rem 0;
+        color: white;
+
+        .icon{
+            font-size: 40px;
+        }
+        .tcd1{
+            font-weight: bold;
+            font-size: 22.5px;
+        }
+    }
+
+}
+
+.nosotros-sect{
+
+    .sub-image{
+        background-image: url("../../public/img/nosotros-image.jpg");
+        background-size: cover;
+        height: 100px;
+        background-position: 0px -2890px;
+    }
+
+
+}
 
 .principalSect{
     background-image: url("../../public/img/index-image.jpg");
@@ -339,7 +410,7 @@ $img_height: 900px;
     }
 
     .nav-link-footer{
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .footer-link-icon{

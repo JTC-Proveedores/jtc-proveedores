@@ -41,7 +41,10 @@ const FourthFrame = ({}) => {
                                                     <p>{des}</p>
                                                 )
                                             }) }
-                                            <button className="flip-card-button">Learn More</button>
+
+                                            <div className={'pt-4'}>
+                                                <a role={'buttton'} className="flip-card-button" href={'https://api.whatsapp.com/send?phone=51900169121'}>Contactar</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

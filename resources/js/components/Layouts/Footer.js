@@ -27,19 +27,20 @@ const Footer = ({url}) => {
 
                 <div className={'col-12 px-0 py-4'}>
                     <div className={'container'}>
-                        <div className={'row mx-0'}>
-                            <div className={'col-12 col-md-3'}>
+                        <div className={'row mx-0 justify-content-center'}>
+
+                            <div className={'col-8 col-md-3 pt-2 pb-4 py-md-0'}>
                                 <div className={'se-bg'}>
                                     <img src={Logo} className={'se-logo'}/>
                                 </div>
                             </div>
 
-                            <div className={'col-12 col-md-5'}>
+                            <div className={'col-12 col-md-5 py-2 py-md-0'}>
                                 <div className={'footer-title'}>
                                     Contacto
                                 </div>
 
-                                <ul className={'list-unstyled footer-list my-3'}>
+                                <ul className={'list-unstyled footer-list my-2'}>
                                     {contactLinks.map((cL,key) => {
                                         return(
                                             <li className="pt-2">
@@ -52,15 +53,15 @@ const Footer = ({url}) => {
                                 </ul>
                             </div>
 
-                            <div className={'col-12 col-md-4'}>
+                            <div className={'col-12 col-md-4 py-2 py-md-0'}>
                                 <div className={'footer-title'}>
                                     Buscanos en
                                 </div>
 
-                                <div className={'my-3 row'}>
+                                <div className={'my-2 row'}>
                                     {socialMediaLinks.map((sml, key) => {
                                         return(
-                                            <div className={'col-12 col-md-auto'}>
+                                            <div className={'col-2 col-md-auto'}>
                                                 <a className="footer-link-icon" href={sml.link} target="_blank">
                                                     <i className={sml.icon}></i>
                                                 </a>
@@ -68,8 +69,8 @@ const Footer = ({url}) => {
                                         )
                                     })}
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
                 </div>
