@@ -14,7 +14,8 @@ const FourthFrame = ({}) => {
         {title: 'CONSTRUCCION', imageLink: 'https://attachments-jtc.s3.amazonaws.com/material-construccion.jpg', description:['ARENA', 'CEMENTO', 'LADRILLOS', 'FIERRO DE CONSTRUCCIÓN', 'ARENA FINA', 'PINTURAS']},
         {title: 'OFICINA', imageLink: 'https://attachments-jtc.s3.amazonaws.com/oficinas.jpg', description:['ÚTILES DE OFICINA', 'MUEBLES', 'KITCHENING', 'EQUIPOS DE OFICINA']},
         {title: 'SEGURIDAD INDUSTRIAL', imageLink: 'https://attachments-jtc.s3.amazonaws.com/seguridad-industrial.jpg', description:['CALZADO INDUSTRIAL', 'CONFECCIÓN INDUSTRIAL', 'PROTECCIÓN DE CABEZA', 'PROTECCIÓN RESPIRATORIA', 'PROTECCIÓN AUDITIVA']},
-    ]
+    ];
+
     return(
         <div className='home-area-4'>
             <div className={'container'}>

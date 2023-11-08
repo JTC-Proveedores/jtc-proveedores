@@ -36,6 +36,12 @@ const ThirdFrame = ({}) => {
                         )
                     })}
                 </div>
+
+                <div className={'pt-4'}>
+                    <a className={'btn btn-lg btn-jtc-white w-100'} href={'https://api.whatsapp.com/send?phone=51900169121'} target={'_blank'}>
+                        Contactar
+                    </a>
+                </div>
             </div>
         </div>
     )

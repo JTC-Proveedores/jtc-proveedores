@@ -211,7 +211,7 @@ $img_height: 900px;
 
 .contact-sect{
     .btn-contact{
-        background-color: $custom_blue;
+        background-color: $custom_light_blue;
         color: white;
         font-weight: bold;
         width: 100%;
@@ -230,6 +230,11 @@ $img_height: 900px;
     }
 
     .formContact{
+        border: solid 3px $custom_light_blue;
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        background-color: #ededed;
+
         .formLabel{
             font-weight: bold;
             font-size: 17.5px;
@@ -265,6 +270,14 @@ $img_height: 900px;
             font-weight: bold;
             font-size: 22.5px;
         }
+        .tcd-link{
+            color: white;
+            text-decoration: unset;
+
+            &:hover, &:active, &:focus{
+                text-decoration: unset;
+            }
+        }
     }
 
 }
@@ -278,6 +291,80 @@ $img_height: 900px;
         background-position: 0px -2890px;
     }
 
+    .custom-cont{
+        padding: 2.5rem;
+    }
+
+    .sect{
+        .tittle{
+            color: $custom_blue;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .content{
+            color: $custom_gray;
+            margin-top: 1.5rem;
+            font-size: 20px;
+        }
+    }
+
+    .strong-points{
+
+        .sp-sect{
+            padding: 2.5rem;
+        }
+
+        .sp-title{
+            color: $custom_blue;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .sp-card{
+            border: solid $custom_blue;
+            border-radius: 0.5rem;
+            padding: 1.25rem 0.75rem;
+            height: 100%;
+            font-size: 17.5px;
+            color: $custom_gray;
+            font-weight: 500;
+        }
+
+    }
+
+    .mv-section{
+        background-color: $custom_gray;
+        padding: 2.5rem 0rem;
+    }
+
+    .mission-vission{
+        background-color: white;
+        border: solid $custom_blue 3px;
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+
+        @media only screen and (max-width: 767px) {
+            .mv-card{
+                border: solid $custom_gray 2px;
+                border-radius: 0.5rem;
+                padding: 0.75rem;
+                margin: 0.5rem 0rem;
+            }
+        }
+
+        .mv-title{
+            font-size: 30px;
+            color: $custom_light_blue;
+            border-bottom: solid $custom_gray 3px;
+        }
+
+        .mv-content{
+            color: $custom_gray;
+            font-size: 20px;
+        }
+    }
 
 }
 
@@ -320,6 +407,79 @@ $img_height: 900px;
             color: $custom_white;
             background-color: $custom_dark_blue;
         }
+    }
+}
+
+.btn-jtc{
+    background-color: $custom_blue !important;
+    color: $custom_white !important;
+    font-weight: bold !important;
+    &:hover, &:focus, &:active{
+        color: $custom_white !important;
+        background-color: $custom_dark_blue !important;
+    }
+}
+
+.categorySect{
+    padding: 2.5rem;
+
+    .title{
+        color: $custom_blue;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .cat-area{
+        .ca-card{
+            border: solid $custom_light_blue;
+            border-radius: 0.5rem;
+            margin: 2rem 0rem;
+            padding: 1rem;
+
+            &:hover, &:focus, &:active{
+                background-color: $custom_transparent_blue;
+                .ca-title, .ca-content{
+                    color: white!important;
+                }
+                .ca-title{
+                    text-decoration: underline !important;
+                }
+            }
+
+            .ca-bg-img{
+                background-size: cover;
+                background-position: center;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .ca-title{
+                    color: white !important;
+                    text-decoration: underline;
+                }
+            }
+            .ca-title{
+                font-weight: bold;
+                font-size: 25px;
+                color: black;
+            }
+
+            .ca-content{
+                margin-bottom: 0.5rem;
+                color:black;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.btn-jtc-white{
+    background-color: white !important;
+    color: $custom_blue !important;
+    font-weight: bold !important;
+    &:hover, &:focus, &:active{
+        color: $custom_dark_blue !important;
+        background-color: white !important;
     }
 }
 

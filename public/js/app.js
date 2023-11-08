@@ -9326,24 +9326,141 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Functions_General__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Functions/General */ "./resources/js/components/Functions/General.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure " + obj); }
+
 
 
 
 
 var Categorias = function Categorias(_ref) {
   _objectDestructuringEmpty(_ref);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_Functions_General__WEBPACK_IMPORTED_MODULE_2__.getWindowSize)()),
+    _useState2 = _slicedToArray(_useState, 2),
+    windowSize = _useState2[0],
+    setWindowSize = _useState2[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    function handleWindowResize() {
+      setWindowSize((0,_Functions_General__WEBPACK_IMPORTED_MODULE_2__.getWindowSize)());
+    }
+    window.addEventListener('resize', handleWindowResize);
+    return function () {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+  var width = windowSize.innerWidth;
+  var categoryCards = [{
+    title: 'PREDICTIVO',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/analisis-preventivo.jpeg',
+    description: ['CAMARA TERMOGRAFICA', 'ANALIZADORES DE VIBRACION', 'ANALIZADOR DE GASES Y DE MOTOR', 'ESTROBOSCOPIO', 'CAMARAS ACUSTICAS INDUSTRIALES', 'MEDIDORES DE AISLAMIENTO']
+  }, {
+    title: 'CONDUCCION DE FLUIDOS',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/valvulas.jpeg',
+    description: ['MANGUERAS INDUSTRIALES', 'CONEXIONES HIDRAULICAS', 'ACOPLES', 'VALVULAS']
+  }, {
+    title: 'MAQUINARIA PESADA Y AGRICOLA',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/maquinaria.jpeg',
+    description: ['SISTEMA HIDRÁULICO', 'SISTEMA ELÉCTRICO', 'SISTEMA MOTOR', 'SISTEMA TRANSMISIÓN', 'LLANTAS', 'ACCESORIOS EN GENERAL']
+  }, {
+    title: 'BOMBAS INDUSTRIALES',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/bombas-industriales.jpg',
+    description: ['BOMBAS CENTRÍFUGAS', 'BOMBAS TURBINA', 'BOMBAS SUMERGIBLES']
+  }, {
+    title: 'FAJAS INDUSTRIALES',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/fajas-industriales.png',
+    description: ['FAJAS TRANSPORTADORAS', 'FAJAS MODULARES']
+  }, {
+    title: 'SENSORES',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/sensores.png',
+    description: ['INDUCTIVOS', 'CAPACITIVOS', 'ÓPTICOS', 'FOTO-REFLECTIVOS', 'ULTRASÓNICOS', 'TEMPERATURA']
+  }, {
+    title: 'MECANICA',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/repuestos.jpg',
+    description: ['REPUESTOS GENERAL', 'RODAMIENTOS', 'FAJAS', 'BOMBAS', 'FERRETERÍA']
+  }, {
+    title: 'ELECTRONICA',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/variadores-velocidad.png',
+    description: ['SENSORES', 'TARJETAS ELECTRÓNICAS', 'SERVOMOTOR', 'SERVODRIVE', 'VARIADORES DE VELOCIDAD']
+  }, {
+    title: 'LABORATORIO',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/termometro-industrial.png',
+    description: ['MANÓMETROS', 'TERMÓMETROS', 'EQUIPOS DE LABORATORIO', 'REFRACTÓMETROS', 'EQUIPOS DE INSTRUMENTACIÓN ANALÍTICA']
+  }, {
+    title: 'CONSTRUCCION',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/material-construccion.jpg',
+    description: ['ARENA', 'CEMENTO', 'LADRILLOS', 'FIERRO DE CONSTRUCCIÓN', 'ARENA FINA', 'PINTURAS']
+  }, {
+    title: 'OFICINA',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/oficinas.jpg',
+    description: ['ÚTILES DE OFICINA', 'MUEBLES', 'KITCHENING', 'EQUIPOS DE OFICINA']
+  }, {
+    title: 'SEGURIDAD INDUSTRIAL',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/seguridad-industrial.jpg',
+    description: ['CALZADO INDUSTRIAL', 'CONFECCIÓN INDUSTRIAL', 'PROTECCIÓN DE CABEZA', 'PROTECCIÓN RESPIRATORIA', 'PROTECCIÓN AUDITIVA']
+  }];
   var url = window.location;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "Hola"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    className: 'categorySect',
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: 'container ',
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: 'title',
+        children: "Nuestros servicios"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: 'cat-area pt-4',
+        children: categoryCards.map(function (c, key) {
+          var backGroundStyle = {
+            backgroundImage: 'url("' + c.imageLink + '")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          };
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: 'ca-card',
+            style: width > 767 ? {} : backGroundStyle,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              className: 'row mx-0',
+              children: [width > 767 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: 'col-12 col-md-3 ca-bg-img',
+                style: backGroundStyle
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                className: 'col-12 col-md-9',
+                style: width > 767 ? {} : {
+                  backgroundColor: '#0c629173'
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  className: 'ca-title',
+                  children: c.title
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                  className: 'pt-2',
+                  children: c.description.map(function (cd, key) {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                      className: 'ca-content',
+                      style: width > 767 ? {} : {
+                        color: 'white',
+                        fontWeight: '500'
+                      },
+                      children: '- ' + cd
+                    });
+                  })
+                })]
+              })]
+            })
+          });
+        })
+      })]
     })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Categorias);
 if (document.getElementById('categorias')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Categorias, {}), document.getElementById('categorias'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Categorias, {}), document.getElementById('categorias'));
 }
 
 /***/ }),
@@ -9413,20 +9530,36 @@ var Contacto = function Contacto(_ref) {
   var height = windowSize.innerHeight - 80;
   var url = window.location;
   function save(e) {
-    console.log('Bang my head against the wall');
+    (0,_Functions_General__WEBPACK_IMPORTED_MODULE_2__.ajaxSendMail)(names, email, message).then(function (r) {
+      if (r.code === 200) {} else {}
+    })["catch"](function (error) {
+      setIsLoading(false);
+      if (error.response.status == 422) {
+        showAlert('error', error.response.data);
+      }
+    });
   }
   var content = [{
     icon: 'fas fa-map-marker-alt',
     title: 'Ubicación',
-    list: ['Avenida prolongación Javier Prado este 8117 - Ate']
+    list: [{
+      contain: 'Avenida prolongación Javier Prado este 8117 - Ate',
+      link: 'https://maps.app.goo.gl/VRtQajGmGNU1uZsB8'
+    }]
   }, {
     icon: 'fas fa-mobile-alt',
     title: 'Call center',
-    list: ['+51 900 169 121']
+    list: [{
+      contain: '+51 900 169 121',
+      link: 'tel:51900169121'
+    }]
   }, {
     icon: 'fas fa-envelope-open-text',
     title: 'E-mail',
-    list: ['cotizaciones@jtcproveedores.com']
+    list: [{
+      contain: 'cotizaciones@jtcproveedores.com',
+      link: 'mailto:cotizaciones@jtcproveedores.com'
+    }]
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
     className: 'contact-sect',
@@ -9450,10 +9583,10 @@ var Contacto = function Contacto(_ref) {
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: 'pt-4',
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: 'row justify-content-center contact-area',
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: 'col-12 col-md-5',
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: 'col-12',
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
               className: 'p-2 contactMedia',
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -9480,9 +9613,13 @@ var Contacto = function Contacto(_ref) {
                           className: 'tcd1',
                           children: c.title
                         }), c.list.map(function (l, key) {
-                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                            className: 'tcd2',
-                            children: l
+                          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                            className: 'tcd-link',
+                            href: l.link,
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                              className: 'tcd2',
+                              children: l.contain
+                            })
                           });
                         })]
                       })]
@@ -9491,68 +9628,7 @@ var Contacto = function Contacto(_ref) {
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: 'col-12 col-md-7',
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
-              className: 'formContact',
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "form-group py-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-                  className: 'formLabel',
-                  children: "Nombre(s) y Apellido(s)"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-                  type: "text",
-                  className: "form-control",
-                  placeholder: "Ingresar nombre(s) y apellido(s)",
-                  name: "names",
-                  value: names,
-                  onChange: function onChange(e) {
-                    return setNames(e.target.value);
-                  }
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "form-group py-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-                  className: 'formLabel',
-                  children: "Correo de contacto"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-                  type: "email",
-                  className: "form-control",
-                  placeholder: "Ingresar correo electr\xF3nico",
-                  name: 'email',
-                  value: email,
-                  onChange: function onChange(e) {
-                    return setEmail(e.target.value);
-                  }
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "form-group py-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-                  className: 'formLabel',
-                  children: "Mensaje"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("textarea", {
-                  className: "form-control",
-                  rows: "3",
-                  name: 'message',
-                  value: message,
-                  onChange: function onChange(e) {
-                    return setMessage(e.target.value);
-                  }
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                className: 'form-group py-2',
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-                  type: "button",
-                  className: "btn btn-contact btn-lg btn-block",
-                  disabled: names && email && message ? false : false,
-                  onClick: function onClick(e) {
-                    return save(e);
-                  },
-                  children: "Enviar"
-                })
-              })]
-            })
-          })]
+          })
         })
       })]
     })
@@ -9620,6 +9696,7 @@ if (document.getElementById('example')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ajaxSendMail: () => (/* binding */ ajaxSendMail),
 /* harmony export */   getWindowSize: () => (/* binding */ getWindowSize)
 /* harmony export */ });
 function getWindowSize() {
@@ -9632,6 +9709,16 @@ function getWindowSize() {
   };
 }
 ;
+function ajaxSendMail(names, email, message) {
+  return axios.post('/ajax-send-mail', {
+    names: names,
+    email: email,
+    message: message
+  }).then(function (res) {
+    var r = res.data;
+    return r;
+  });
+}
 
 /***/ }),
 
@@ -9916,7 +10003,8 @@ var SecondFrame = function SecondFrame(_ref) {
       className: 'mt-4 text-center',
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
         className: "btn btn-lg btn-jtc-ext",
-        href: "#",
+        href: 'https://api.whatsapp.com/send?phone=51900169121',
+        target: '_blank',
         role: "button",
         children: "Cont\xE1ctanos"
       })
@@ -10007,6 +10095,14 @@ var ThirdFrame = function ThirdFrame(_ref) {
             })
           });
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: 'pt-4',
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          className: 'btn btn-lg btn-jtc-white w-100',
+          href: 'https://api.whatsapp.com/send?phone=51900169121',
+          target: '_blank',
+          children: "Contactar"
+        })
       })]
     })
   });
@@ -10048,26 +10144,23 @@ var Footer = function Footer(_ref) {
   var url = _ref.url;
   var contactLinks = [{
     icon: 'fab fa-whatsapp',
-    content: '+51 912 345 678',
-    link: 'https://api.whatsapp.com/send?phone=51912345678'
+    content: '+51 900 169 121',
+    link: 'https://api.whatsapp.com/send?phone=51900169121'
   }, {
     icon: 'fa-regular fa-envelope',
     content: 'cotizaciones@jtcproveedores.com',
-    link: 'https://api.whatsapp.com/send?phone=51912345678'
+    link: 'mailto:cotizaciones@jtcproveedores.com'
   }];
-  var socialMediaLinks = [{
-    icon: 'fab fa-facebook-square',
-    content: '',
-    link: 'https://api.whatsapp.com/send?phone=51912345678'
-  }, {
+  var socialMediaLinks = [
+  //{icon: 'fab fa-facebook-square', content:'', link: 'https://api.whatsapp.com/send?phone=51912345678'},
+  {
     icon: 'fas fa-map-marked-alt',
     content: '',
-    link: 'https://api.whatsapp.com/send?phone=51912345678'
-  }, {
-    icon: 'fab fa-instagram',
-    content: '',
-    link: 'https://api.whatsapp.com/send?phone=51912345678'
-  }];
+    link: 'https://maps.app.goo.gl/A6erNiL52ywtcvAE7'
+  }
+  //{icon: 'fab fa-instagram', content:'', link: 'https://api.whatsapp.com/send?phone=51912345678'},
+  ];
+
   var year = moment__WEBPACK_IMPORTED_MODULE_2___default()().format('YYYY');
   var isTabletOrMobile = (0,react_responsive__WEBPACK_IMPORTED_MODULE_5__.useMediaQuery)({
     query: '(max-width: 991px)'
@@ -10401,14 +10494,94 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
 var Nosotros = function Nosotros(_ref) {
   _objectDestructuringEmpty(_ref);
+  var mvCards = [{
+    title: 'Misión',
+    icon: 'fas fa-compass',
+    content: 'Ser un socio estratégico de confianza para nuestros clientes en la gestión de sus cadenas de suministro industriales. Nos comprometemos a ofrecer productos de calidad, entregas a tiempo y asesoramiento post venta para impulsar el éxito de nuestros clientes y contribuir al crecimiento sostenible de sus operaciones.'
+  }, {
+    title: 'Visión',
+    icon: 'fas fa-eye',
+    content: 'Convertirnos en la empresa lider de soluciones de cadena de suministro para la industria.Innovando continuamente en nuestros servicios y productos para satisfacer las necesidades cambiantes de nuestros clientes. Buscamos ser reconocidos por nuestra excelencia en el servicio al cliente, nuestro compromiso con la calidad y nuestro impacto positivo en la comunidad y el medio ambiente'
+  }];
+  var pfCards = ['En nuestra organización, la puntualidad es un pilar central que nos impulsa a honrar todos nuestros compromisos en el tiempo acordado.', 'Somos capaces de adaptarnos rápidamente a nuevas situaciones gracias a nuestra agilidad.', 'Innovación, eficiencia e integridad son los pilares de nuestra empresa.', 'Contamos con una amplia diversidad de productos y servicios, desde soluciones tecnológicas hasta requerimientos muy especificos, todo ello con el objetivo de atender a las distintas demandas de nuestros clientes.', 'Garantía de Calidad y Fiabilidad.', 'Nuestra amplia experiencia y profundo entendimiento del mercado se traducen en la entrega de un servicio al cliente excepcional, respaldado por un sólido soporte postventa.'];
   var url = window.location;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: 'nosotros-sect',
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: 'sub-image',
-      children: "Nosotros"
+      className: 'sub-image'
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "Hola"
+      className: 'wwr-sect',
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: 'container custom-cont',
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: 'sect',
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: 'tittle',
+            children: "\xBFQui\xE9nes Somos?"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: 'content',
+            children: "Somos JTC proveedores Industriales, una empresa especializada en la gesti\xF3n de cadenas de suministro. Proveemos productos de marcas globales de uso industrial. Tenemos enfoque en el servicio al cliente. Contamos con almacenes que garantizan entregas puntuales y un s\xF3lido soporte postventa a trav\xE9s de nuestros asesores comerciales altamente capacitados. Nuestra ventaja competitiva radica en nuestra profunda comprensi\xF3n y experiencia en los mercados nacionales e internacionales, lo que nos permite ofrecer un nivel de servicio excepcional y fortalecer relaciones s\xF3lidas con nuestros clientes."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: 'pt-4',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+              className: 'btn btn-lg btn-jtc w-100',
+              href: 'https://api.whatsapp.com/send?phone=51900169121',
+              target: '_blank',
+              children: "Contactar"
+            })
+          })]
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: 'mv-section',
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: 'mission-vission container',
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: 'row',
+          children: mvCards.map(function (m, key) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: 'col-12 col-md-6 mv-card',
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: 'mv-title',
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: m.icon
+                }), " ", m.title]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: 'mv-content',
+                children: m.content
+              })]
+            });
+          })
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: 'strong-points',
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: 'sp-sect container',
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: 'sp-title',
+          children: "Nuestros puntos fuertes"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: 'row my-3',
+          children: pfCards.map(function (p, key) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: 'col-12 col-md-4 py-3 px-2',
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: 'sp-card',
+                children: p
+              })
+            });
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: 'pt-4',
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+            className: 'btn btn-lg btn-jtc w-100',
+            href: 'https://api.whatsapp.com/send?phone=51900169121',
+            target: '_blank',
+            children: "Contactar"
+          })
+        })]
+      })
     })]
   });
 };

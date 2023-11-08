@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ReactDOM from "react-dom";
-import {getWindowSize} from "../Functions/General";
+import {ajaxSendMail, getWindowSize} from "../Functions/General";
 
 const Contacto = ({}) =>{
 
@@ -26,13 +26,24 @@ const Contacto = ({}) =>{
     let url = window.location;
 
     function save(e){
-        console.log('Bang my head against the wall')
+        ajaxSendMail(names, email, message).then(r => {
+            if(r.code === 200){
+
+            }else{
+
+            }
+        }).catch( function (error) {
+            setIsLoading(false);
+            if (error.response.status == 422){
+                showAlert('error', error.response.data);
+            }
+        });
     }
 
     let content = [
-        {icon: 'fas fa-map-marker-alt', title: 'Ubicación', list: ['Avenida prolongación Javier Prado este 8117 - Ate',]},
-        {icon: 'fas fa-mobile-alt', title: 'Call center', list: ['+51 900 169 121',]},
-        {icon: 'fas fa-envelope-open-text', title: 'E-mail', list: ['cotizaciones@jtcproveedores.com',]},
+        {icon: 'fas fa-map-marker-alt', title: 'Ubicación', list: [{contain: 'Avenida prolongación Javier Prado este 8117 - Ate', link: 'https://maps.app.goo.gl/VRtQajGmGNU1uZsB8' }]},
+        {icon: 'fas fa-mobile-alt', title: 'Call center', list: [{contain: '+51 900 169 121', link: 'tel:51900169121'}]},
+        {icon: 'fas fa-envelope-open-text', title: 'E-mail', list: [{contain: 'cotizaciones@jtcproveedores.com', link:'mailto:cotizaciones@jtcproveedores.com'}]},
     ];
 
     return(
@@ -55,7 +66,7 @@ const Contacto = ({}) =>{
                 <div className={'pt-4'}>
                     <div className={'row justify-content-center contact-area'}>
 
-                        <div className={'col-12 col-md-5'}>
+                        <div className={'col-12'}>
                             <div className={'p-2 contactMedia'}>
                                 <div className={'t1'}>CONTACTANOS</div>
                                 <div className={'pt-2 t2'}>
@@ -74,7 +85,9 @@ const Contacto = ({}) =>{
                                                         <div className={'tcd1'}>{c.title}</div>
                                                         {c.list.map((l,key) => {
                                                             return(
-                                                                <p className={'tcd2'}>{l}</p>
+                                                                <a className={'tcd-link'} href={l.link}>
+                                                                    <p className={'tcd2'}>{l.contain}</p>
+                                                                </a>
                                                             )
                                                         })}
                                                     </div>
@@ -86,32 +99,35 @@ const Contacto = ({}) =>{
                             </div>
                         </div>
 
-                        <div className={'col-12 col-md-7'}>
-                            <form className={'formContact'}>
+                        {/*
+                            <div className={'col-12 col-md-7'}>
+                                <form className={'formContact'}>
 
-                                <div className="form-group py-2">
-                                    <label className={'formLabel'}>Nombre(s) y Apellido(s)</label>
-                                    <input type="text" className="form-control" placeholder="Ingresar nombre(s) y apellido(s)" name="names" value={names} onChange={(e) => setNames(e.target.value)}/>
-                                </div>
+                                    <div className="form-group py-2">
+                                        <label className={'formLabel'}>Nombre(s) y Apellido(s)</label>
+                                        <input type="text" className="form-control" placeholder="Ingresar nombre(s) y apellido(s)" name="names" value={names} onChange={(e) => setNames(e.target.value)}/>
+                                    </div>
 
-                                <div className="form-group py-2">
-                                    <label className={'formLabel'}>Correo de contacto</label>
-                                    <input type="email" className="form-control" placeholder="Ingresar correo electrónico" name={'email'} value={email} onChange={(e) => setEmail(e.target.value)}/>
-                                </div>
+                                    <div className="form-group py-2">
+                                        <label className={'formLabel'}>Correo de contacto</label>
+                                        <input type="email" className="form-control" placeholder="Ingresar correo electrónico" name={'email'} value={email} onChange={(e) => setEmail(e.target.value)}/>
+                                    </div>
 
-                                <div className="form-group py-2">
-                                    <label className={'formLabel'}>Mensaje</label>
-                                    <textarea className="form-control" rows="3" name={'message'} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                                </div>
+                                    <div className="form-group py-2">
+                                        <label className={'formLabel'}>Mensaje</label>
+                                        <textarea className="form-control" rows="3" name={'message'} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                                    </div>
 
-                                <div className={'form-group py-2'}>
-                                    <button type="button" className="btn btn-contact btn-lg btn-block" disabled={(names && email && message) ? false : false} onClick={(e) => save(e)}>
-                                        Enviar
-                                    </button>
-                                </div>
+                                    <div className={'form-group py-2'}>
+                                        <button type="button" className="btn btn-contact btn-lg btn-block" disabled={(names && email && message) ? false : false} onClick={(e) => save(e)}>
+                                            Enviar
+                                        </button>
+                                    </div>
 
-                            </form>
-                        </div>
+                                </form>
+                            </div>
+                        */}
+
                     </div>
                 </div>
             </div>

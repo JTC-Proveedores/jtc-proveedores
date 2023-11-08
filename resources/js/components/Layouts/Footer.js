@@ -8,14 +8,14 @@ const Footer = ({url}) => {
 
 
     let contactLinks = [
-        {icon: 'fab fa-whatsapp', content: '+51 912 345 678', link: 'https://api.whatsapp.com/send?phone=51912345678'},
-        {icon: 'fa-regular fa-envelope', content: 'cotizaciones@jtcproveedores.com', link: 'https://api.whatsapp.com/send?phone=51912345678'},
+        {icon: 'fab fa-whatsapp', content: '+51 900 169 121', link: 'https://api.whatsapp.com/send?phone=51900169121'},
+        {icon: 'fa-regular fa-envelope', content: 'cotizaciones@jtcproveedores.com', link: 'mailto:cotizaciones@jtcproveedores.com'},
     ]
 
     let socialMediaLinks = [
-        {icon: 'fab fa-facebook-square', content:'', link: 'https://api.whatsapp.com/send?phone=51912345678'},
-        {icon: 'fas fa-map-marked-alt', content:'', link: 'https://api.whatsapp.com/send?phone=51912345678'},
-        {icon: 'fab fa-instagram', content:'', link: 'https://api.whatsapp.com/send?phone=51912345678'},
+        //{icon: 'fab fa-facebook-square', content:'', link: 'https://api.whatsapp.com/send?phone=51912345678'},
+        {icon: 'fas fa-map-marked-alt', content:'', link: 'https://maps.app.goo.gl/A6erNiL52ywtcvAE7'},
+        //{icon: 'fab fa-instagram', content:'', link: 'https://api.whatsapp.com/send?phone=51912345678'},
     ]
 
     const year = moment().format('YYYY');

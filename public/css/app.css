@@ -197,7 +197,7 @@ body {
   }
 }
 .contact-sect .btn-contact {
-  background-color: #0C6291;
+  background-color: #1088c9;
   color: white;
   font-weight: bold;
   width: 100%;
@@ -211,6 +211,12 @@ body {
   border: #0C6291 4.5px solid;
   border-radius: 0.5rem;
   padding: 1rem;
+}
+.contact-sect .formContact {
+  border: solid 3px #1088c9;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #ededed;
 }
 .contact-sect .formContact .formLabel {
   font-weight: bold;
@@ -240,12 +246,77 @@ body {
   font-weight: bold;
   font-size: 22.5px;
 }
+.contact-sect .contentDiv .tcd-link {
+  color: white;
+  text-decoration: unset;
+}
+.contact-sect .contentDiv .tcd-link:hover, .contact-sect .contentDiv .tcd-link:active, .contact-sect .contentDiv .tcd-link:focus {
+  text-decoration: unset;
+}
 
 .nosotros-sect .sub-image {
-  background-image: url(/images/nosotros-image.jpg?940dc5c842583f6d30d3740ed08ab3b4);
+  background-image: url(/images/nosotros-image.jpg?14948dc7ae922de28589073b62914bed);
   background-size: cover;
   height: 100px;
   background-position: 0px -2890px;
+}
+.nosotros-sect .custom-cont {
+  padding: 2.5rem;
+}
+.nosotros-sect .sect .tittle {
+  color: #0C6291;
+  font-size: 50px;
+  font-weight: bold;
+}
+.nosotros-sect .sect .content {
+  color: #6d6d6d;
+  margin-top: 1.5rem;
+  font-size: 20px;
+}
+.nosotros-sect .strong-points .sp-sect {
+  padding: 2.5rem;
+}
+.nosotros-sect .strong-points .sp-title {
+  color: #0C6291;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.nosotros-sect .strong-points .sp-card {
+  border: solid #0C6291;
+  border-radius: 0.5rem;
+  padding: 1.25rem 0.75rem;
+  height: 100%;
+  font-size: 17.5px;
+  color: #6d6d6d;
+  font-weight: 500;
+}
+.nosotros-sect .mv-section {
+  background-color: #6d6d6d;
+  padding: 2.5rem 0rem;
+}
+.nosotros-sect .mission-vission {
+  background-color: white;
+  border: solid #0C6291 3px;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+@media only screen and (max-width: 767px) {
+  .nosotros-sect .mission-vission .mv-card {
+    border: solid #6d6d6d 2px;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0rem;
+  }
+}
+.nosotros-sect .mission-vission .mv-title {
+  font-size: 30px;
+  color: #1088c9;
+  border-bottom: solid #6d6d6d 3px;
+}
+.nosotros-sect .mission-vission .mv-content {
+  color: #6d6d6d;
+  font-size: 20px;
 }
 
 .principalSect {
@@ -277,6 +348,71 @@ body {
 .principalSect .btn-jtc:hover, .principalSect .btn-jtc:focus, .principalSect .btn-jtc:active {
   color: #FBFEF9;
   background-color: #074c6c;
+}
+
+.btn-jtc {
+  background-color: #0C6291 !important;
+  color: #FBFEF9 !important;
+  font-weight: bold !important;
+}
+.btn-jtc:hover, .btn-jtc:focus, .btn-jtc:active {
+  color: #FBFEF9 !important;
+  background-color: #074c6c !important;
+}
+
+.categorySect {
+  padding: 2.5rem;
+}
+.categorySect .title {
+  color: #0C6291;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+.categorySect .cat-area .ca-card {
+  border: solid #1088c9;
+  border-radius: 0.5rem;
+  margin: 2rem 0rem;
+  padding: 1rem;
+}
+.categorySect .cat-area .ca-card:hover, .categorySect .cat-area .ca-card:focus, .categorySect .cat-area .ca-card:active {
+  background-color: rgba(16, 136, 201, 0.5490196078);
+}
+.categorySect .cat-area .ca-card:hover .ca-title, .categorySect .cat-area .ca-card:hover .ca-content, .categorySect .cat-area .ca-card:focus .ca-title, .categorySect .cat-area .ca-card:focus .ca-content, .categorySect .cat-area .ca-card:active .ca-title, .categorySect .cat-area .ca-card:active .ca-content {
+  color: white !important;
+}
+.categorySect .cat-area .ca-card:hover .ca-title, .categorySect .cat-area .ca-card:focus .ca-title, .categorySect .cat-area .ca-card:active .ca-title {
+  text-decoration: underline !important;
+}
+.categorySect .cat-area .ca-card .ca-bg-img {
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 767px) {
+  .categorySect .cat-area .ca-card .ca-title {
+    color: white !important;
+    text-decoration: underline;
+  }
+}
+.categorySect .cat-area .ca-card .ca-title {
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+}
+.categorySect .cat-area .ca-card .ca-content {
+  margin-bottom: 0.5rem;
+  color: black;
+  font-weight: 500;
+}
+
+.btn-jtc-white {
+  background-color: white !important;
+  color: #0C6291 !important;
+  font-weight: bold !important;
+}
+.btn-jtc-white:hover, .btn-jtc-white:focus, .btn-jtc-white:active {
+  color: #074c6c !important;
+  background-color: white !important;
 }
 
 .home-area-2 {
