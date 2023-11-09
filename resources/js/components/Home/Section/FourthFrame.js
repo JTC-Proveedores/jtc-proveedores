@@ -2,49 +2,36 @@ import React from "react";
 
 const FourthFrame = ({}) => {
     let cards = [
-        {title: 'PREDICTIVO', imageLink:'https://attachments-jtc.s3.amazonaws.com/analisis-preventivo.jpeg', description:['CAMARA TERMOGRAFICA', 'ANALIZADORES DE VIBRACION', 'ANALIZADOR DE GASES Y DE MOTOR', 'ESTROBOSCOPIO', 'CAMARAS ACUSTICAS INDUSTRIALES', 'MEDIDORES DE AISLAMIENTO']},
-        {title: 'CONDUCCION DE FLUIDOS', imageLink: 'https://attachments-jtc.s3.amazonaws.com/valvulas.jpeg', description:['MANGUERAS INDUSTRIALES', 'CONEXIONES HIDRAULICAS', 'ACOPLES', 'VALVULAS']},
-        {title: 'MAQUINARIA PESADA Y AGRICOLA', imageLink: 'https://attachments-jtc.s3.amazonaws.com/maquinaria.jpeg', description:['SISTEMA HIDRÁULICO', 'SISTEMA ELÉCTRICO', 'SISTEMA MOTOR', 'SISTEMA TRANSMISIÓN', 'LLANTAS', 'ACCESORIOS EN GENERAL']},
-        {title: 'BOMBAS INDUSTRIALES', imageLink: 'https://attachments-jtc.s3.amazonaws.com/bombas-industriales.jpg', description:['BOMBAS CENTRÍFUGAS', 'BOMBAS TURBINA', 'BOMBAS SUMERGIBLES']},
-        {title: 'FAJAS INDUSTRIALES', imageLink: 'https://attachments-jtc.s3.amazonaws.com/fajas-industriales.png', description:['FAJAS TRANSPORTADORAS','FAJAS MODULARES']},
-        {title: 'SENSORES', imageLink: 'https://attachments-jtc.s3.amazonaws.com/sensores.png', description:['INDUCTIVOS', 'CAPACITIVOS', 'ÓPTICOS', 'FOTO-REFLECTIVOS', 'ULTRASÓNICOS', 'TEMPERATURA']},
-        {title: 'MECANICA', imageLink: 'https://attachments-jtc.s3.amazonaws.com/repuestos.jpg', description:['REPUESTOS GENERAL', 'RODAMIENTOS', 'FAJAS', 'BOMBAS', 'FERRETERÍA']},
-        {title: 'ELECTRONICA', imageLink: 'https://attachments-jtc.s3.amazonaws.com/variadores-velocidad.png', description:['SENSORES', 'TARJETAS ELECTRÓNICAS', 'SERVOMOTOR', 'SERVODRIVE', 'VARIADORES DE VELOCIDAD']},
-        {title: 'LABORATORIO', imageLink: 'https://attachments-jtc.s3.amazonaws.com/termometro-industrial.png', description:['MANÓMETROS', 'TERMÓMETROS', 'EQUIPOS DE LABORATORIO', 'REFRACTÓMETROS', 'EQUIPOS DE INSTRUMENTACIÓN ANALÍTICA']},
-        {title: 'CONSTRUCCION', imageLink: 'https://attachments-jtc.s3.amazonaws.com/material-construccion.jpg', description:['ARENA', 'CEMENTO', 'LADRILLOS', 'FIERRO DE CONSTRUCCIÓN', 'ARENA FINA', 'PINTURAS']},
-        {title: 'OFICINA', imageLink: 'https://attachments-jtc.s3.amazonaws.com/oficinas.jpg', description:['ÚTILES DE OFICINA', 'MUEBLES', 'KITCHENING', 'EQUIPOS DE OFICINA']},
-        {title: 'SEGURIDAD INDUSTRIAL', imageLink: 'https://attachments-jtc.s3.amazonaws.com/seguridad-industrial.jpg', description:['CALZADO INDUSTRIAL', 'CONFECCIÓN INDUSTRIAL', 'PROTECCIÓN DE CABEZA', 'PROTECCIÓN RESPIRATORIA', 'PROTECCIÓN AUDITIVA']},
-    ];
+        {icon: 'fas fa-industry', iconColor:'#B0C800', title: 'INDUSTRIA', imageLink:'https://attachments-jtc.s3.amazonaws.com/industrial-image.jpg', description:'Equipos, repuestos y consumibles de uso y aplicación industrial.'},
+        {icon: 'fas fa-cogs', iconColor:'#ED8500', title: 'MANTENIMIENTO', imageLink: 'https://attachments-jtc.s3.amazonaws.com/mantenimiento-image.jpg', description:'Herramientas, accesorios y consumibles para el mantenimiento y seguridad.'},
+       ];
 
     return(
         <div className='home-area-4'>
             <div className={'container'}>
                 <div className={'title'}>¿Cómo podemos ayudarte?</div>
 
-                <div className={'row mx-0'}>
+                <div className={'row mx-0 justify-content-around pt-5'}>
 
                     {cards.map((c,key) => {
                         return(
-                            <div className="col-12 col-md-6 col-lg-4 py-4 px-0 px-md-2 box-item">
-                                <div className="flip-card">
-                                    <div className="flip-card-front text-center" style={{backgroundImage: 'url("' + c.imageLink +'")'}}>
-                                        <div className="inner color-white">
-                                            <h3 className="flip-card-header">{c.title}</h3>
-                                            <div className={'pt-4'}>
-                                                <i className="fas fa-chevron-circle-right flip-card-chevron-icon"></i>
-                                            </div>
-                                        </div>
+                            <div className="col-12 col-md-5 py-4 py-md-0 px-0 px-md-2 box-item mb-0">
+                                <div className="slide-card" style={{backgroundImage: 'url("' + c.imageLink +'")'}}>
+                                    <div className="sc-title-area">
+                                        <div className="sc-title" style={{backgroundColor: c.iconColor}}>{c.title}</div>
                                     </div>
-                                    <div className="flip-card-back text-center " style={{backgroundImage: 'url("' + c.imageLink +'")'}}>
-                                        <div className="inner color-white bg-transparent-blue">
-                                            {c.description.map((des) => {
-                                                return(
-                                                    <p>{des}</p>
-                                                )
-                                            }) }
+                                    <div className="sc-content-area">
+                                        <div className={'px-2 py-1'}>
+                                            <div className="sc-icon">
+                                                <i className={c.icon} style={{color: c.iconColor}}></i>
+                                            </div>
 
-                                            <div className={'pt-4'}>
-                                                <a role={'buttton'} className="flip-card-button" href={'https://api.whatsapp.com/send?phone=51900169121'}>Contactar</a>
+                                            <div className={'sc-description pt-2'}>
+                                                <div>{c.description}</div>
+
+                                                <div className={'pt-4 text-center'}>
+                                                    <a className="btn sc-button" href={'https://api.whatsapp.com/send?phone=51900169121'}>Contactar</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

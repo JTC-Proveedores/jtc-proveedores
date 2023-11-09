@@ -530,6 +530,62 @@ $img_height: 900px;
     }
 }
 
+.slide-card{
+    background-position: 50%;
+    background-size: cover;
+    height: 525px;
+
+    .sc-title-area{
+        min-height: 275px;
+        position: relative;
+
+        .sc-title{
+            //background-color: $custom_transparent_blue;
+            font-size: 25px;
+            color:white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .sc-content-area{
+        height: 250px;
+        background-color: #efefef;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 0.75rem 0.75rem 0rem 0rem;
+
+        .sc-icon{
+            text-align: center;
+            font-size: 50px;
+        }
+    }
+
+    .sc-button{
+        background-color: $custom_blue;
+        border: 2px solid #fff;
+        border-radius: 0.5rem;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        text-decoration: unset !important;
+
+        &:hover, &:focus, &:active{
+            background-color: $custom_dark_blue;
+            color: white;
+        }
+    }
+}
+
 
 .home-area-4{
     padding: 2.5rem;

@@ -9328,12 +9328,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _Functions_General__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Functions/General */ "./resources/js/components/Functions/General.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure " + obj); }
 
 
@@ -9342,21 +9336,7 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
 var Categorias = function Categorias(_ref) {
   _objectDestructuringEmpty(_ref);
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)((0,_Functions_General__WEBPACK_IMPORTED_MODULE_2__.getWindowSize)()),
-    _useState2 = _slicedToArray(_useState, 2),
-    windowSize = _useState2[0],
-    setWindowSize = _useState2[1];
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    function handleWindowResize() {
-      setWindowSize((0,_Functions_General__WEBPACK_IMPORTED_MODULE_2__.getWindowSize)());
-    }
-    window.addEventListener('resize', handleWindowResize);
-    return function () {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-  var width = windowSize.innerWidth;
-  var categoryCards = [{
+  var cards = [{
     title: 'PREDICTIVO',
     imageLink: 'https://attachments-jtc.s3.amazonaws.com/analisis-preventivo.jpeg',
     description: ['CAMARA TERMOGRAFICA', 'ANALIZADORES DE VIBRACION', 'ANALIZADOR DE GASES Y DE MOTOR', 'ESTROBOSCOPIO', 'CAMARAS ACUSTICAS INDUSTRIALES', 'MEDIDORES DE AISLAMIENTO']
@@ -9405,56 +9385,60 @@ var Categorias = function Categorias(_ref) {
     imageLink: 'https://attachments-jtc.s3.amazonaws.com/seguridad-industrial.jpg',
     description: ['CALZADO INDUSTRIAL', 'CONFECCIÓN INDUSTRIAL', 'PROTECCIÓN DE CABEZA', 'PROTECCIÓN RESPIRATORIA', 'PROTECCIÓN AUDITIVA']
   }];
-  var url = window.location;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    className: 'categorySect',
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: 'container ',
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: 'title',
-        children: "Nuestros servicios"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: 'cat-area pt-4',
-        children: categoryCards.map(function (c, key) {
-          var backGroundStyle = {
-            backgroundImage: 'url("' + c.imageLink + '")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          };
+    className: "home-area-4",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: 'container',
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: 'row mx-0',
+        children: cards.map(function (c, key) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: 'ca-card',
-            style: width > 767 ? {} : backGroundStyle,
+            className: "col-12 col-md-6 col-lg-4 py-4 px-0 px-md-2 box-item",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-              className: 'row mx-0',
-              children: [width > 767 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                className: 'col-12 col-md-3 ca-bg-img',
-                style: backGroundStyle
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: 'col-12 col-md-9',
-                style: width > 767 ? {} : {
-                  backgroundColor: '#0c629173'
+              className: "flip-card",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "flip-card-front text-center",
+                style: {
+                  backgroundImage: 'url("' + c.imageLink + '")'
                 },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                  className: 'ca-title',
-                  children: c.title
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                  className: 'pt-2',
-                  children: c.description.map(function (cd, key) {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "inner color-white",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+                    className: "flip-card-header",
+                    children: c.title
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                    className: 'pt-4',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+                      className: "fas fa-chevron-circle-right flip-card-chevron-icon"
+                    })
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "flip-card-back text-center ",
+                style: {
+                  backgroundImage: 'url("' + c.imageLink + '")'
+                },
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "inner color-white bg-transparent-blue",
+                  children: [c.description.map(function (des) {
                     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                      className: 'ca-content',
-                      style: width > 767 ? {} : {
-                        color: 'white',
-                        fontWeight: '500'
-                      },
-                      children: '- ' + cd
+                      children: des
                     });
-                  })
-                })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                    className: 'pt-4',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                      role: 'buttton',
+                      className: "flip-card-button",
+                      href: 'https://api.whatsapp.com/send?phone=51900169121',
+                      children: "Contactar"
+                    })
+                  })]
+                })
               })]
             })
           });
         })
-      })]
+      })
     })
   });
 };
@@ -9784,53 +9768,17 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 var FourthFrame = function FourthFrame(_ref) {
   _objectDestructuringEmpty(_ref);
   var cards = [{
-    title: 'PREDICTIVO',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/analisis-preventivo.jpeg',
-    description: ['CAMARA TERMOGRAFICA', 'ANALIZADORES DE VIBRACION', 'ANALIZADOR DE GASES Y DE MOTOR', 'ESTROBOSCOPIO', 'CAMARAS ACUSTICAS INDUSTRIALES', 'MEDIDORES DE AISLAMIENTO']
+    icon: 'fas fa-industry',
+    iconColor: '#B0C800',
+    title: 'INDUSTRIA',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/industrial-image.jpg',
+    description: 'Equipos, repuestos y consumibles de uso y aplicación industrial.'
   }, {
-    title: 'CONDUCCION DE FLUIDOS',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/valvulas.jpeg',
-    description: ['MANGUERAS INDUSTRIALES', 'CONEXIONES HIDRAULICAS', 'ACOPLES', 'VALVULAS']
-  }, {
-    title: 'MAQUINARIA PESADA Y AGRICOLA',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/maquinaria.jpeg',
-    description: ['SISTEMA HIDRÁULICO', 'SISTEMA ELÉCTRICO', 'SISTEMA MOTOR', 'SISTEMA TRANSMISIÓN', 'LLANTAS', 'ACCESORIOS EN GENERAL']
-  }, {
-    title: 'BOMBAS INDUSTRIALES',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/bombas-industriales.jpg',
-    description: ['BOMBAS CENTRÍFUGAS', 'BOMBAS TURBINA', 'BOMBAS SUMERGIBLES']
-  }, {
-    title: 'FAJAS INDUSTRIALES',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/fajas-industriales.png',
-    description: ['FAJAS TRANSPORTADORAS', 'FAJAS MODULARES']
-  }, {
-    title: 'SENSORES',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/sensores.png',
-    description: ['INDUCTIVOS', 'CAPACITIVOS', 'ÓPTICOS', 'FOTO-REFLECTIVOS', 'ULTRASÓNICOS', 'TEMPERATURA']
-  }, {
-    title: 'MECANICA',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/repuestos.jpg',
-    description: ['REPUESTOS GENERAL', 'RODAMIENTOS', 'FAJAS', 'BOMBAS', 'FERRETERÍA']
-  }, {
-    title: 'ELECTRONICA',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/variadores-velocidad.png',
-    description: ['SENSORES', 'TARJETAS ELECTRÓNICAS', 'SERVOMOTOR', 'SERVODRIVE', 'VARIADORES DE VELOCIDAD']
-  }, {
-    title: 'LABORATORIO',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/termometro-industrial.png',
-    description: ['MANÓMETROS', 'TERMÓMETROS', 'EQUIPOS DE LABORATORIO', 'REFRACTÓMETROS', 'EQUIPOS DE INSTRUMENTACIÓN ANALÍTICA']
-  }, {
-    title: 'CONSTRUCCION',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/material-construccion.jpg',
-    description: ['ARENA', 'CEMENTO', 'LADRILLOS', 'FIERRO DE CONSTRUCCIÓN', 'ARENA FINA', 'PINTURAS']
-  }, {
-    title: 'OFICINA',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/oficinas.jpg',
-    description: ['ÚTILES DE OFICINA', 'MUEBLES', 'KITCHENING', 'EQUIPOS DE OFICINA']
-  }, {
-    title: 'SEGURIDAD INDUSTRIAL',
-    imageLink: 'https://attachments-jtc.s3.amazonaws.com/seguridad-industrial.jpg',
-    description: ['CALZADO INDUSTRIAL', 'CONFECCIÓN INDUSTRIAL', 'PROTECCIÓN DE CABEZA', 'PROTECCIÓN RESPIRATORIA', 'PROTECCIÓN AUDITIVA']
+    icon: 'fas fa-cogs',
+    iconColor: '#ED8500',
+    title: 'MANTENIMIENTO',
+    imageLink: 'https://attachments-jtc.s3.amazonaws.com/mantenimiento-image.jpg',
+    description: 'Herramientas, accesorios y consumibles para el mantenimiento y seguridad.'
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "home-area-4",
@@ -9840,48 +9788,48 @@ var FourthFrame = function FourthFrame(_ref) {
         className: 'title',
         children: "\xBFC\xF3mo podemos ayudarte?"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: 'row mx-0',
+        className: 'row mx-0 justify-content-around pt-5',
         children: cards.map(function (c, key) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "col-12 col-md-6 col-lg-4 py-4 px-0 px-md-2 box-item",
+            className: "col-12 col-md-5 py-4 py-md-0 px-0 px-md-2 box-item mb-0",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-              className: "flip-card",
+              className: "slide-card",
+              style: {
+                backgroundImage: 'url("' + c.imageLink + '")'
+              },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "flip-card-front text-center",
-                style: {
-                  backgroundImage: 'url("' + c.imageLink + '")'
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                  className: "inner color-white",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-                    className: "flip-card-header",
-                    children: c.title
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                    className: 'pt-4',
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fas fa-chevron-circle-right flip-card-chevron-icon"
-                    })
-                  })]
+                className: "sc-title-area",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  className: "sc-title",
+                  style: {
+                    backgroundColor: c.iconColor
+                  },
+                  children: c.title
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "flip-card-back text-center ",
-                style: {
-                  backgroundImage: 'url("' + c.imageLink + '")'
-                },
+                className: "sc-content-area",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                  className: "inner color-white bg-transparent-blue",
-                  children: [c.description.map(function (des) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                      children: des
-                    });
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                    className: 'pt-4',
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                      role: 'buttton',
-                      className: "flip-card-button",
-                      href: 'https://api.whatsapp.com/send?phone=51900169121',
-                      children: "Contactar"
+                  className: 'px-2 py-1',
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "sc-icon",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                      className: c.icon,
+                      style: {
+                        color: c.iconColor
+                      }
                     })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                    className: 'sc-description pt-2',
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                      children: c.description
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                      className: 'pt-4 text-center',
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                        className: "btn sc-button",
+                        href: 'https://api.whatsapp.com/send?phone=51900169121',
+                        children: "Contactar"
+                      })
+                    })]
                   })]
                 })
               })]
@@ -10553,34 +10501,6 @@ var Nosotros = function Nosotros(_ref) {
             });
           })
         })
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: 'strong-points',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: 'sp-sect container',
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: 'sp-title',
-          children: "Nuestros puntos fuertes"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: 'row my-3',
-          children: pfCards.map(function (p, key) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: 'col-12 col-md-4 py-3 px-2',
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                className: 'sp-card',
-                children: p
-              })
-            });
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: 'pt-4',
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            className: 'btn btn-lg btn-jtc w-100',
-            href: 'https://api.whatsapp.com/send?phone=51900169121',
-            target: '_blank',
-            children: "Contactar"
-          })
-        })]
       })
     })]
   });

@@ -4,21 +4,7 @@ import {getWindowSize} from "../Functions/General";
 
 const Categorias = ({}) =>{
 
-    const [windowSize, setWindowSize] = useState(getWindowSize());
-
-    useEffect(() => {
-        function handleWindowResize() {
-            setWindowSize(getWindowSize());
-        }
-        window.addEventListener('resize', handleWindowResize);
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
-
-    let width = windowSize.innerWidth;
-
-    let categoryCards = [
+    let cards = [
         {title: 'PREDICTIVO', imageLink:'https://attachments-jtc.s3.amazonaws.com/analisis-preventivo.jpeg', description:['CAMARA TERMOGRAFICA', 'ANALIZADORES DE VIBRACION', 'ANALIZADOR DE GASES Y DE MOTOR', 'ESTROBOSCOPIO', 'CAMARAS ACUSTICAS INDUSTRIALES', 'MEDIDORES DE AISLAMIENTO']},
         {title: 'CONDUCCION DE FLUIDOS', imageLink: 'https://attachments-jtc.s3.amazonaws.com/valvulas.jpeg', description:['MANGUERAS INDUSTRIALES', 'CONEXIONES HIDRAULICAS', 'ACOPLES', 'VALVULAS']},
         {title: 'MAQUINARIA PESADA Y AGRICOLA', imageLink: 'https://attachments-jtc.s3.amazonaws.com/maquinaria.jpeg', description:['SISTEMA HIDRÁULICO', 'SISTEMA ELÉCTRICO', 'SISTEMA MOTOR', 'SISTEMA TRANSMISIÓN', 'LLANTAS', 'ACCESORIOS EN GENERAL']},
@@ -33,47 +19,44 @@ const Categorias = ({}) =>{
         {title: 'SEGURIDAD INDUSTRIAL', imageLink: 'https://attachments-jtc.s3.amazonaws.com/seguridad-industrial.jpg', description:['CALZADO INDUSTRIAL', 'CONFECCIÓN INDUSTRIAL', 'PROTECCIÓN DE CABEZA', 'PROTECCIÓN RESPIRATORIA', 'PROTECCIÓN AUDITIVA']},
     ];
 
-    let url = window.location;
-
-
     return(
-        <div className={'categorySect'}>
-            <div className={'container '}>
-                <div className={'title'}>
-                    Nuestros servicios
-                </div>
+        <div className='home-area-4'>
+            <div className={'container'}>
 
-                <div className={'cat-area pt-4'}>
-                    {categoryCards.map((c, key) => {
+                <div className={'row mx-0'}>
 
-                        let backGroundStyle = {
-                            backgroundImage: 'url("' + c.imageLink +'")',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }
-
+                    {cards.map((c,key) => {
                         return(
-                            <div className={'ca-card'} style={(width > 767) ? {} : backGroundStyle}>
-                                <div className={'row mx-0'}>
-                                    {(width > 767) &&
-                                        <div className={'col-12 col-md-3 ca-bg-img'} style={backGroundStyle}>
+                            <div className="col-12 col-md-6 col-lg-4 py-4 px-0 px-md-2 box-item">
+                                <div className="flip-card">
+                                    <div className="flip-card-front text-center" style={{backgroundImage: 'url("' + c.imageLink +'")'}}>
+                                        <div className="inner color-white">
+                                            <h3 className="flip-card-header">{c.title}</h3>
+                                            <div className={'pt-4'}>
+                                                <i className="fas fa-chevron-circle-right flip-card-chevron-icon"></i>
+                                            </div>
                                         </div>
-                                    }
-                                    <div className={'col-12 col-md-9'} style={(width > 767) ? {} : {backgroundColor: '#0c629173'}}>
-                                        <p className={'ca-title'}>{c.title}</p>
-                                        <div className={'pt-2'}>
-                                            {c.description.map((cd, key) => {
+                                    </div>
+                                    <div className="flip-card-back text-center " style={{backgroundImage: 'url("' + c.imageLink +'")'}}>
+                                        <div className="inner color-white bg-transparent-blue">
+                                            {c.description.map((des) => {
                                                 return(
-                                                    <p className={'ca-content'} style={(width > 767) ? {} : {color: 'white', fontWeight: '500'}}>{'- ' + cd}</p>
+                                                    <p>{des}</p>
                                                 )
-                                            })}
+                                            }) }
+
+                                            <div className={'pt-4'}>
+                                                <a role={'buttton'} className="flip-card-button" href={'https://api.whatsapp.com/send?phone=51900169121'}>Contactar</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         )
                     })}
+
                 </div>
+
             </div>
         </div>
     )

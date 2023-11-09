@@ -66,6 +66,7 @@ const Nosotros = ({}) =>{
                 </div>
             </div>
 
+            {/*
             <div className={'strong-points'}>
                 <div className={'sp-sect container'}>
                     <div className={'sp-title'}>
@@ -91,6 +92,7 @@ const Nosotros = ({}) =>{
                     </div>
                 </div>
             </div>
+            */}
 
         </div>
     )
