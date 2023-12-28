@@ -723,3 +723,11 @@ $img_height: 900px;
         margin-top: 11px;
     }
 }
+
+.fp-link{
+    &, &:hover, &:active, &:focus{
+        color: white !important;
+        font-weight: bold;
+        text-decoration: none !important;
+    }
+}

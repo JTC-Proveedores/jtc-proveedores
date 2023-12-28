@@ -623,6 +623,12 @@ body {
     margin-top: 11px;
   }
 }
+.fp-link, .fp-link:hover, .fp-link:active, .fp-link:focus {
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
 .service {
   margin: 8px;
 }

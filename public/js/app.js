@@ -10187,8 +10187,11 @@ var Footer = function Footer(_ref) {
               className: 'col-12',
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                 className: "mb-0 footer-title-text text-center",
-                children: ["\xA9 ", year + ' JTC Proveedor Industrial || Developed by', " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("b", {
-                  children: "inerfil.site"
+                children: ["\xA9 ", year + ' JTC Proveedor Industrial || Developed by', " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+                  className: 'fp-link',
+                  href: 'https://api.whatsapp.com/send?phone=51955172889&text=Hola%2C%20estoy%20interesado%20en%20que%20me%20crees%20una%20p%C3%A1gina%20web%20%F0%9F%99%82',
+                  target: '_blank',
+                  children: "Felipe.Pacherres"
                 })]
               })
             })
